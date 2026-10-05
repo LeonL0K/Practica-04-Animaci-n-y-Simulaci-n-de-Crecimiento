@@ -1,0 +1,53 @@
+<!-- Joel Iván Juárez León -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Práctica 04 — Crecimiento de Plantas 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="titulo">🌱 Simulador de Crecimiento 3D — Joel Lechón</header>
+
+  <a href="respuestas.html" id="btn-respuestas">📄 Respuestas</a>
+
+  <aside id="controles">
+    <h2>Controles de Simulación</h2>
+
+    <label for="velocidad">⏩ Velocidad de crecimiento</label>
+    <input type="range" id="velocidad" min="0.2" max="3" step="0.1" value="1" />
+    <span id="velocidad-valor">1.0x</span>
+
+    <label for="viento">🌬️ Intensidad del viento</label>
+    <input type="range" id="viento" min="0" max="3" step="0.1" value="1" />
+    <span id="viento-valor">1.0</span>
+
+    <button id="btn-pausa">⏸ Pausar animación</button>
+    <button id="btn-reiniciar">🔄 Reiniciar crecimiento</button>
+    <button id="btn-color-hojas">🍃 Cambiar color hojas</button>
+    <button id="btn-camara">📷 Reiniciar cámara</button>
+
+    <p class="ayuda">Haz clic sobre cualquier parte de la planta 🌱</p>
+  </aside>
+
+  <div id="info">
+    <h3 id="info-nombre">Selecciona una parte</h3>
+    <p><strong>Tipo:</strong> <span id="info-tipo">—</span></p>
+    <p><strong>Crecimiento:</strong> <span id="info-progreso">—</span></p>
+    <p><strong>Descripción:</strong> <span id="info-desc">Haz clic sobre una parte de la planta.</span></p>
+  </div>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
